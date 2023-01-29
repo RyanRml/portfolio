@@ -1,0 +1,78 @@
+.container {
+  height: 100vh;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactSection {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.p {
+  width: 40%;
+}
+
+.form {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+
+  height: 30px;
+  margin-top: 10px;
+
+  color: white;
+
+  font-family: "Goldman", sans-serif;
+
+  resize: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btnForm {
+  margin: 20px 0;
+  background: none;
+
+  border: 1px solid grey;
+  color: white;
+  cursor: pointer;
+  padding: 10px 0;
+
+  font-family: "Goldman", sans-serif;
+
+  transition: all 0.3s ease-out;
+}
+
+.btnForm:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}
+
+.imgAccount {
+  height: 50px;
+  width: auto;
+  margin: 10px 10px;
+}

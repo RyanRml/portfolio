@@ -7,9 +7,11 @@ import styles from "@/styles/Home.module.css";
 import Welcome from "@/components/Welcome";
 import About from "@/components/About";
 import Work from "@/components/Work";
+import Contact from "@/components/Contact";
 import { useRef } from "react";
 
 export default function Home() {
+  const homeRef = useRef();
   const aboutRef = useRef();
   const workRef = useRef();
   const contactRef = useRef();
@@ -28,7 +30,9 @@ export default function Home() {
       </Head>
       <nav className={styles.container}>
         <ul className={styles.navList}>
-          <li className={styles.navItems}>Home</li>
+          <li className={styles.navItems} onClick={() => scroll(homeRef)}>
+            Home
+          </li>
           <li className={styles.navItems} onClick={() => scroll(aboutRef)}>
             About
           </li>
@@ -40,12 +44,14 @@ export default function Home() {
           </li>
         </ul>
       </nav>
+      <span ref={homeRef} />
       <Welcome />
       <span ref={aboutRef} />
       <About />
       <span ref={workRef} />
       <Work />
       <span ref={contactRef} style={{ height: "100vh" }} />
+      <Contact />
     </>
   );
 }
