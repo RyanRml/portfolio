@@ -1,0 +1,240 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 30px 0;
+}
+
+.sectionTitle {
+  width: 100%;
+
+  margin-bottom: 30px;
+
+  font-size: 40px;
+}
+
+.aboutMe {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 20px;
+
+  border: 1px solid grey;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  transition: transform 0.3s ease-out;
+}
+
+.aboutMe:hover {
+  transform: scale(1.02);
+}
+
+.aboutMeText {
+  width: 70%;
+}
+
+.h3 {
+  margin-bottom: 10px;
+}
+
+.purpleText {
+  color: rgb(0, 106, 255);
+}
+
+/* .available {
+  color: green;
+} */
+
+.memojiImg {
+  height: 200px;
+  width: auto;
+}
+
+.bgGlowing {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  background-color: rgb(119, 119, 119);
+
+  filter: blur(100px);
+  z-index: -1;
+
+  animation: bgGlowingAnim 5s ease-in-out infinite;
+}
+
+@keyframes bgGlowingAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* -------------------------------------------------- */
+
+.sectionTitle2 {
+  width: 100%;
+
+  text-align: right;
+
+  margin: 30px 0;
+
+  font-size: 40px;
+}
+
+.skillsContainer {
+  width: 100%;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skillCard {
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+  margin-bottom: 30px;
+
+  border: 1px solid grey;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: transform 0.3s ease-out;
+}
+.skillCard:hover {
+  transform: scale(1.02);
+}
+
+.skillCard::after {
+  content: "";
+  position: absolute;
+
+  width: 35%;
+  height: 35%;
+
+  border-radius: 50%;
+
+  z-index: -1;
+
+  filter: blur(50px);
+
+  animation: bgGlowingAnim 5s ease-in-out infinite;
+}
+
+.skillIcon {
+  width: auto;
+  height: 37%;
+}
+
+.skillCard1::after {
+  background-color: rgb(0, 179, 255);
+}
+
+.skillCard2::after {
+  background-color: white;
+}
+
+.skillCard3::after {
+  background-color: rgb(0, 255, 0);
+}
+
+.skillCard4::after {
+  background-color: yellow;
+}
+
+.skillCard5::after {
+  background-color: red;
+}
+
+.skillCard6::after {
+  background-color: blue;
+}
+
+.skillCard7::after {
+  background-color: red;
+}
+
+.skillCard8::after {
+  background-color: rgb(0, 255, 0);
+}
+
+@media screen and (max-width: 1280px) {
+  .skillCard {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .skillCard {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .aboutMe {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+  .p {
+    font-size: 13px;
+  }
+
+  .skillCard {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .skillCard {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .skillCard {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .skillCard {
+    width: 150px;
+    height: 150px;
+    font-size: 10px;
+  }
+
+  .skillCard::after {
+    filter: blur(30px);
+  }
+}
+@media screen and (max-width: 359px) {
+  .skillCard {
+    width: 100px;
+    height: 100px;
+    font-size: 10px;
+    text-align: center;
+  }
+}
