@@ -45,7 +45,7 @@ export default function About() {
         </div>
         <div className={`${styles.skillCard} ${styles.skillCard2}`}>
           <img
-            src="NextJsIcon.png"
+            src="ImgIconNext.png"
             className={styles.skillIcon}
             alt="NextJs Logo"
           />
