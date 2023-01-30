@@ -8,8 +8,8 @@ export default function Welcome() {
       "style",
       `left: ${e.clientX - 100}px; top: ${e.clientY - 50}px`
     );
+    document.body.appendChild(elem);
 
-    document.body.insertAdjacentElement("beforeend", elem);
     elem.onanimationend = () => {
       elem.remove();
     };

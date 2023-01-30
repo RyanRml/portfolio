@@ -1,17 +1,78 @@
 import styles from "@/styles/Contact.module.css";
 
+import { useState } from "react";
+
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSend, setIsSend] = useState("");
+  const [isSendBool, setIsSendBool] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const sendMessage = () => {
+    if (isLoading) {
+      return;
+    }
+    if (
+      !email.match(
+        /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-]+)(\.[a-zA-Z]{2,5}){1,2}$/
+      )
+    ) {
+      setIsSend("Votre email n'est pas valable");
+      setIsSendBool(false);
+      return;
+    }
+    if (name && email && message) {
+      setIsLoading(true);
+      fetch("https://portfolio-backend-puce.vercel.app/message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.result) {
+            setIsSend("Message envoyé avec succès !");
+            setEmail("");
+            setMessage("");
+            setName("");
+            setIsSendBool(true);
+            setIsLoading(false);
+          } else {
+            setIsSend("Une erreur à eu lieu réessayez ou envoyez moi un mail");
+            setIsSendBool(false);
+          }
+        });
+    } else {
+      setIsSend("Remplissez tous les champs");
+      setIsSendBool(false);
+    }
+  };
+  let isSendStyle = { margin: "20px 0 0", color: "red" };
+  if (isSendBool) {
+    isSendStyle = { margin: "20px 0 0", color: "green" };
+  }
+
+  let loadindStyle = { display: "none" };
+  if (isLoading) {
+    loadindStyle = {};
+  }
+
   return (
     <section className={styles.container}>
+      <h2 className={styles.h2}>Contact</h2>
       <div className={styles.contactSection}>
         <p className={styles.p}>
-          I'm a 20-year-old passionate for coding. I enjoy creating unique and
-          interesting projects using web technologies and I am always looking
-          for new design challenges to solve. I am interested in creating smart
-          user interfaces and designing useful interactions, which leads to a
-          rich web experience for the end user. When I'm not working on code,
-          I'm always looking to learn more and take on new challenges. I am
-          alsovailable for hire.
+          Si vous avez une opportunité ou un message à me faire passer,
+          n'hésitez pas à me l'envoyer via le formulaire ou par mail.
+          <br />
+          Je suis toujours à l'écoute de nouvelles opportunités et je me ferai
+          un plaisir de vous répondre dès que possible.
         </p>
         <form className={styles.form}>
           <label for="inputName" className={styles.label}>
@@ -23,6 +84,9 @@ export default function Contact() {
             className={styles.input}
             placeholder="Name"
             required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            maxLength="50"
           />
           <label for="inputMail" className={styles.label}>
             Email
@@ -33,6 +97,9 @@ export default function Contact() {
             className={styles.input}
             placeholder="Email"
             required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            maxLength="50"
           />
           <label for="inputMsg" className={styles.label}>
             Message
@@ -44,8 +111,19 @@ export default function Contact() {
             placeholder="Enter your message"
             required
             style={{ height: "200px" }}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            maxLength="1000"
           />
-          <button type="submit" className={styles.btnForm}>
+          <div className={styles.loader} style={loadindStyle}></div>
+          <p style={isSendStyle} className={styles.pStatus}>
+            {isSend}
+          </p>
+          <button
+            type="button"
+            className={styles.btnForm}
+            onClick={sendMessage}
+          >
             Send
           </button>
         </form>
@@ -68,6 +146,9 @@ export default function Contact() {
             alt="Compte Linkedin"
             className={styles.imgAccount}
           />
+        </a>
+        <a href="mailto: ramoulryan@gmail.com" target="_blank" title="Email">
+          <img src="MailIcon.png" alt="Email" className={styles.imgAccount} />
         </a>
       </footer>
     </section>

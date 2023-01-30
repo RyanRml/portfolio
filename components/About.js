@@ -7,19 +7,19 @@ export default function About() {
       <div className={styles.aboutMe}>
         <div className={styles.aboutMeText}>
           <h3 className={styles.h3}>
-            Hi ! I'm Ryan and I'm a{" "}
-            <span className={styles.purpleText}>Fullstack Developer</span>
+            Salut ! Je suis Ryan et je suis un{" "}
+            <span className={styles.devTitle}>Développeur Web Fullstack</span>
           </h3>
 
           <p className={styles.p}>
-            I'm a 20-year-old passionate for coding. I enjoy creating unique and
-            interesting projects using web technologies and I am always looking
-            for new design challenges to solve. I am interested in creating
-            smart user interfaces and designing useful interactions, which leads
-            to a rich web experience for the end user. When I'm not working on
-            code, I'm always looking to learn more and take on new challenges. I
-            am also <span className={styles.available}>available</span> for
-            hire.
+            Je suis un passionné de code âgé de 20 ans. J'aime créer des projets
+            uniques et intéressants en utilisant de nouvelles technologies web
+            et je suis toujours à la recherche de nouveaux défis et problèmes à
+            résoudre. Je suis intéressé par la création d'interfaces utilisateur
+            intelligentes, ce qui conduit à une riche expérience web pour
+            l'utilisateur final. Lorsque je ne travaille pas sur le code, je
+            suis toujours à la recherche d'apprendre plus et de relever de
+            nouveaux défis. Je suis également disponible pour un emploi.
           </p>
         </div>
 

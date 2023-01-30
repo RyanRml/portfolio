@@ -1,10 +1,11 @@
 .container {
-  height: 100vh;
   margin: 0 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.h2 {
+  margin: 100px 0;
+  text-align: center;
+  font-size: 50px;
 }
 
 .contactSection {
@@ -21,7 +22,6 @@
 
 .form {
   width: 40%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,8 +71,49 @@
   border: 1px solid white;
 }
 
+.footer {
+  text-align: center;
+}
+
 .imgAccount {
   height: 50px;
   width: auto;
-  margin: 10px 10px;
+  margin: 50px 10px;
+}
+
+@media (max-width: 900px) {
+  .contactSection {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .p {
+    width: 90%;
+    text-align: center;
+  }
+  .pStatus {
+    font-size: 12px;
+  }
+  .form {
+    width: 90%;
+    margin-top: 100px;
+  }
+}
+
+.loader {
+  margin: 20px 0 0;
+  border: 3.9px solid #f3f3f3; /* Light grey */
+  border-top: 3.9px solid black; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
