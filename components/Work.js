@@ -4,18 +4,15 @@ import { useRef } from "react";
 export default function Work() {
   return (
     <section className={styles.container}>
-      <h2 className={styles.h2}>Work</h2>
+      <h2 className={styles.h2}>Projets</h2>
       <div className={styles.workLeft}>
         <div className={styles.workLeftText}>
           <h3 className={styles.h3}>TravelHack</h3>
           <p className={styles.p}>
-            Dans le cadre de mon projet, j'avais pour but de développer une
-            application qui répondait à une problématique précise, en
-            collaboration avec quatre développeurs. Nous avions deux semaines
-            pour réaliser cette tâche. Grâce à ce que nous avons appris lors de
-            notre formation et à une organisation rigoureuse, nous avons réussi
-            à atteindre notre objectif et à livrer une application fonctionnelle
-            et utile.
+            Application mobile pour préparer et enregistrer des voyages. Elle
+            utilise l'API Google Maps pour obtenir des informations sur un lieu
+            (hôtels, restaurants, etc.), évaluer le coût d'un voyage, discuter
+            avec des personnes dans la région via un chat et plus encore.
           </p>
           <div className={styles.workBtn}>
             <a
@@ -44,11 +41,11 @@ export default function Work() {
         <div className={styles.workRightText}>
           <h3 className={styles.h3}>Morning News</h3>
           <p className={styles.p}>
-            Un site web permettant d'accéder aux dernières news de journal The
-            Verge. Ce site donne la possibilité d'accéder à une preview de
-            chaque news, de cacher ou de rendre visible certaines news mais
-            donne aussi la possibilité de se créer un compte ou de se connecter
-            pour pouvoir en enregistrer.
+            Site web pour accéder aux dernières nouvelles du journal The Verge.
+            Il offre une vue d'ensemble de chaque nouvelle, la possibilité de
+            masquer ou de rendre certaines nouvelles visibles, ainsi que la
+            possibilité de créer un compte ou de se connecter pour enregistrer
+            les nouvelles.
           </p>
           <div className={styles.workBtn}>
             <a
@@ -77,9 +74,10 @@ export default function Work() {
         <div className={styles.workLeftText}>
           <h3 className={styles.h3}>My Moviz</h3>
           <p className={styles.p}>
-            Regardez quelles sont les dernières sorties de film ! Ajoutez vos
-            favoris, notez les films que vous avez vu, et combien de fois vous
-            les avez vu !
+            Découvrez les derniers films sortis et ne manquez plus jamais une
+            sortie importante ! Ajoutez vos films préférés à votre liste,
+            évaluez les films que vous avez vus, et tenez une trace de combien
+            de fois vous les avez regardés.
           </p>
           <div className={styles.workBtn}>
             <a
@@ -108,9 +106,9 @@ export default function Work() {
         <div className={styles.workRightText}>
           <h3 className={styles.h3}>Yams</h3>
           <p className={styles.p}>
-            Pas de dés chez soi ? Pas envie de compter ? Ce site reprend le jeu
-            populaire yams sous forme informatique pour jouer n'importe où et
-            sans contrainte.
+            Pas de dés sous la main ? Pas envie de faire le calcul ? Ce site
+            propose une version informatique du jeu populaire Yams pour jouer où
+            vous voulez, sans contraintes.
           </p>
           <div className={styles.workBtn}>
             <a

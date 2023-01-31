@@ -47,3 +47,11 @@
 .navItems:hover::after {
   width: 100%;
 }
+
+@media (max-width: 430px) {
+  .navItems {
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 0;
+  }
+}

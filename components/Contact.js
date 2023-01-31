@@ -76,13 +76,13 @@ export default function Contact() {
         </p>
         <form className={styles.form}>
           <label for="inputName" className={styles.label}>
-            Name
+            Nom
           </label>
           <input
             id="inputName"
             type="text"
             className={styles.input}
-            placeholder="Name"
+            placeholder="Nom"
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -108,7 +108,7 @@ export default function Contact() {
             id="inputMsg"
             type="text"
             className={styles.input}
-            placeholder="Enter your message"
+            placeholder="Entrez votre message"
             required
             style={{ height: "200px" }}
             value={message}
@@ -124,7 +124,7 @@ export default function Contact() {
             className={styles.btnForm}
             onClick={sendMessage}
           >
-            Send
+            Envoyer
           </button>
         </form>
       </div>

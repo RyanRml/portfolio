@@ -31,13 +31,13 @@ export default function Home() {
       <nav className={styles.container}>
         <ul className={styles.navList}>
           <li className={styles.navItems} onClick={() => scroll(homeRef)}>
-            Home
+            Accueil
           </li>
           <li className={styles.navItems} onClick={() => scroll(aboutRef)}>
-            About
+            à propos
           </li>
           <li className={styles.navItems} onClick={() => scroll(workRef)}>
-            Work
+            Projets
           </li>
           <li className={styles.navItems} onClick={() => scroll(contactRef)}>
             Contact

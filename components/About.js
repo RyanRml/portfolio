@@ -3,7 +3,7 @@ import styles from "@/styles/About.module.css";
 export default function About() {
   return (
     <section className={styles.container}>
-      <h2 className={styles.sectionTitle}>About Me</h2>
+      <h2 className={styles.sectionTitle}>À propos</h2>
       <div className={styles.aboutMe}>
         <div className={styles.aboutMeText}>
           <h3 className={styles.h3}>
@@ -33,7 +33,7 @@ export default function About() {
         <span className={styles.bgGlowing}></span>
       </div>
 
-      <h2 className={styles.sectionTitle2}>Skills</h2>
+      <h2 className={styles.sectionTitle2}>Compétences</h2>
       <div className={styles.skillsContainer}>
         <div className={`${styles.skillCard} ${styles.skillCard1}`}>
           <img

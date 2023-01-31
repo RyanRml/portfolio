@@ -86,7 +86,7 @@
 
   margin: 30px 0;
 
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .skillsContainer {
@@ -215,6 +215,9 @@
   }
 }
 @media screen and (max-width: 470px) {
+  .aboutMeText {
+    width: 90%;
+  }
   .skillCard {
     width: 150px;
     height: 150px;
