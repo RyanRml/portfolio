@@ -72,7 +72,6 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 100%;
 }
 
 .workRight {
@@ -83,24 +82,21 @@
   flex-direction: row-reverse;
   justify-content: space-around;
   width: 100%;
-  height: 100%;
 }
 
 .workLeftText {
   position: sticky;
   align-self: start;
-  top: 50%;
+  top: 30%;
 
-  transform: translateY(-50%);
   width: 40%;
 }
 
 .workRightText {
   position: sticky;
   align-self: start;
-  top: 50%;
+  top: 30%;
 
-  transform: translateY(-50%);
   width: 40%;
 }
 
@@ -117,7 +113,7 @@
   width: 100%;
   height: auto;
 
-  margin-top: 25vh;
+  margin-top: 20vh;
 }
 
 .imgWorkPortrait {
@@ -125,7 +121,7 @@
 }
 
 .imgWork:first-child {
-  margin-top: -25%;
+  margin-top: 0;
 }
 
 @media (max-width: 800px) {

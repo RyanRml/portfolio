@@ -1,9 +1,30 @@
 import styles from "@/styles/About.module.css";
+import { useEffect, useRef, useState } from "react";
 
 export default function About() {
+  const [styleTest, setStyleTest] = useState({});
+  const titleRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        console.log(entries);
+        if (entries[0].isIntersecting) {
+          setStyleTest({ opacity: 1 });
+        } else {
+          setStyleTest({});
+        }
+      },
+      { root: null, rootMargin: "0px 0px -20% 0px", threshold: 0 }
+    );
+    observer.observe(titleRef.current);
+  }, []);
+
   return (
     <section className={styles.container}>
-      <h2 className={styles.sectionTitle}>À propos</h2>
+      <h2 ref={titleRef} style={styleTest} className={styles.sectionTitle}>
+        À propos
+      </h2>
       <div className={styles.aboutMe}>
         <div className={styles.aboutMeText}>
           <h3 className={styles.h3}>

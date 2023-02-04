@@ -6,11 +6,15 @@
 }
 
 .sectionTitle {
+  opacity: 0;
+
   width: 100%;
 
   margin-bottom: 30px;
 
   font-size: 40px;
+
+  transition: all 1s ease-out;
 }
 
 .aboutMe {

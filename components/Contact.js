@@ -58,11 +58,6 @@ export default function Contact() {
     isSendStyle = { margin: "20px 0 0", color: "green" };
   }
 
-  let loadindStyle = { display: "none" };
-  if (isLoading) {
-    loadindStyle = {};
-  }
-
   return (
     <section className={styles.container}>
       <h2 className={styles.h2}>Contact</h2>
@@ -75,7 +70,7 @@ export default function Contact() {
           un plaisir de vous répondre dès que possible.
         </p>
         <form className={styles.form}>
-          <label for="inputName" className={styles.label}>
+          <label htmlFor="inputName" className={styles.label}>
             Nom
           </label>
           <input
@@ -87,8 +82,9 @@ export default function Contact() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             maxLength="50"
+            autoComplete="name"
           />
-          <label for="inputMail" className={styles.label}>
+          <label htmlFor="inputMail" className={styles.label}>
             Email
           </label>
           <input
@@ -101,7 +97,7 @@ export default function Contact() {
             onChange={(e) => setEmail(e.target.value)}
             maxLength="50"
           />
-          <label for="inputMsg" className={styles.label}>
+          <label htmlFor="inputMsg" className={styles.label}>
             Message
           </label>
           <textarea
@@ -115,7 +111,7 @@ export default function Contact() {
             onChange={(e) => setMessage(e.target.value)}
             maxLength="1000"
           />
-          <div className={styles.loader} style={loadindStyle}></div>
+          {isLoading && <div className={styles.loader} />}
           <p style={isSendStyle} className={styles.pStatus}>
             {isSend}
           </p>
