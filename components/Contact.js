@@ -22,7 +22,7 @@ export default function Contact() {
           />
         </a>
         <a
-          href="https://www.linkedin.com/in/ryan-r-748490249/"
+          href="https://www.linkedin.com/in/ryanramoul/"
           target="_blank"
           title="Linkedin"
         >

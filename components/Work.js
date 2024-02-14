@@ -50,7 +50,7 @@ export default function Work() {
           <div className={styles.workBtn}>
             <a
               className={styles.a}
-              href="https://morningnews-frontend.vercel.app/"
+              href="#"
               target="_blank"
             >
               Website &#8599;
@@ -82,7 +82,7 @@ export default function Work() {
           <div className={styles.workBtn}>
             <a
               className={styles.a}
-              href="https://mymoviz-part5-frontend-coral.vercel.app/"
+              href="#"
               target="_blank"
             >
               Website &#8599;
@@ -113,7 +113,7 @@ export default function Work() {
           <div className={styles.workBtn}>
             <a
               className={styles.a}
-              href="https://yams-game.vercel.app/"
+              href="#"
               target="_blank"
             >
               Website &#8599;
