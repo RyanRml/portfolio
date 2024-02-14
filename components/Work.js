@@ -17,8 +17,8 @@ export default function Work() {
           <div className={styles.workBtn}>
             <a
               className={styles.a}
-              href="https://github.com/papass38/travelhack-frontend"
-              target="_blank"
+              href="#"
+              // target="_blank"
             >
               Github &#8599;
             </a>
@@ -51,7 +51,7 @@ export default function Work() {
             <a
               className={styles.a}
               href="#"
-              target="_blank"
+              // target="_blank"
             >
               Website &#8599;
             </a>
@@ -83,7 +83,7 @@ export default function Work() {
             <a
               className={styles.a}
               href="#"
-              target="_blank"
+              // target="_blank"
             >
               Website &#8599;
             </a>
@@ -114,7 +114,7 @@ export default function Work() {
             <a
               className={styles.a}
               href="#"
-              target="_blank"
+              // target="_blank"
             >
               Website &#8599;
             </a>
